@@ -10,6 +10,7 @@ x-environment: &airflow_environment
   - AIRFLOW__CORE__LOAD_EXAMPLES=False
   - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
   - AIRFLOW__CORE__DEFAULT_TIMEZONE=America/Bogota
+  - AIRFLOW_CONN_TEST_SPARK=spark://spark-master:7077/?queue=root.default&deploy_mode=cluster&spark_home=%2Fopt%2Fbitnami%2Fspark%2F&spark_binary=spark-submit
 
 x-airflow-image: &airflow_image apache/airflow:2.3.3
 
